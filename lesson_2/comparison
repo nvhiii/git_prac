@@ -1,0 +1,15 @@
+#!/bin/bash
+cmp () {
+    start_time="$(date +%s%N)";
+    echo "Comparing program started at $(date +%s%N)";
+    v1="$1"; 
+    v2="$2"; 
+    if [[ "$v1" -ne "$v2" ]]; then 
+        echo ERRRRR "$v1" is not equal to "$v2"!; 
+    fi;
+    end_time="$(date +%s%N)";
+    duration=($end_time - $start_time);
+    echo "Program executed in $duration";
+}
+
+cmp "$1" "$2";

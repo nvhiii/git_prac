@@ -1,0 +1,14 @@
+#!/bin/bash
+cf () { 
+    echo "Starting program at $(date)"; 
+
+    n1="$1"; 
+    n2="$2"; 
+    n3="$3"; 
+
+    for n in "$@"; do 
+        echo "hey file $n" > "$n".txt; 
+    done; 
+}
+
+cf "$1" "$2" "$3"
