@@ -1,0 +1,9 @@
+#!/bin/sh
+
+myls() {
+
+    dir="$1";
+    for file in "$@"; do
+        echo 
+
+}
